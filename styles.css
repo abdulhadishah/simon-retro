@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at top,
+    #10204a 0%,
+    #020813 55%,
+    #000000 100%
+  );
+  color: #fef2bf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+
+#level-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 2.4rem;
+  margin: 2rem;
+  color: #fef2bf;
+  text-shadow: 0 0 8px #ff00ff, 0 0 16px #00ffff;
+  letter-spacing: 2px;
+}
+
+.container {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  border: 3px solid #00ffff55;
+  box-shadow: 0 0 10px #00ffff55, 0 0 25px #ff00ff33;
+  background: linear-gradient(145deg, #02081a, #050b24);
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 15px;
+  display: inline-block;
+  height: 160px;
+  width: 160px;
+  border: 4px solid #111111;
+  border-radius: 18%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #000, 0 0 15px rgba(0, 0, 0, 0.8);
+  transition: transform 0.08s ease-out, box-shadow 0.08s ease-out,
+    filter 0.1s ease-out;
+}
+
+.green {
+  background: radial-gradient(circle at 30% 30%, #7cff8f, #1c7a29);
+  box-shadow: 0 0 18px rgba(0, 255, 128, 0.6);
+}
+
+.red {
+  background: radial-gradient(circle at 30% 30%, #ff8080, #a01818);
+  box-shadow: 0 0 18px rgba(255, 64, 64, 0.7);
+}
+
+.blue {
+  background: radial-gradient(circle at 30% 30%, #7fb4ff, #1c3f86);
+  box-shadow: 0 0 18px rgba(80, 160, 255, 0.7);
+}
+
+.yellow {
+  background: radial-gradient(circle at 30% 30%, #ffe680, #b38b16);
+  box-shadow: 0 0 18px rgba(255, 222, 89, 0.7);
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 #000, 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.game-over {
+  background: #8b0000 !important;
+  opacity: 0.9;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.pressed {
+  box-shadow: 0 0 25px #ffffff, 0 0 40px #ff00ff99;
+  background-color: #cccccc !important;
+  transform: translateY(2px) scale(0.97);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 600px) {
+  #level-title {
+    font-size: 1.6rem;
+    margin: 1.2rem;
+  }
+
+  .btn {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+  }
+
+  .container {
+    width: 80%;
+    padding: 1rem;
+  }
+}
